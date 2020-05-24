@@ -14,7 +14,9 @@ export class MyTranslationLoader extends TranslateLoader implements OnDestroy {
   private getURL(lang: string, scope: string): string {
     // эта строка будет зависеть, от того, куда и как вы кладете файлы переводов
     // в нашем случае, они лежат в корне проекта в директории i18n
-    return `i18n/${scope ? scope + '/' : ''}${lang}.json`;
+
+    // stackblitz к сожалению не умеет assets, поэтому скачиваем прямо с репозитория
+    return `https://raw.githubusercontent.com/kirills98/angular-lazy-translate/master/src/i18n/${scope ? scope + '/' : ''}${lang}.json`;
   }
 
   /** Скачиваем переводы и запоминаем, что мы их скачали */

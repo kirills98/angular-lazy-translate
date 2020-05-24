@@ -1,0 +1,30 @@
+<div>
+    <p>{{ 'HEADER.TITLE' | translate }}</p>
+    <p>
+        <span>{{ 'HEADER.LANG_LABEL' | translate }}: </span>
+        <a class="link"
+           style="margin-right: 10px"
+           [class.link_active]="checkLang('ru')"
+           (click)="changeLang('ru')"
+        >{{ 'HEADER.LANG_RU' | translate }}</a>
+        <a class="link"
+           [class.link_active]="checkLang('en')"
+           (click)="changeLang('en')"
+        >{{ 'HEADER.LANG_EN' | translate }}</a>
+    </p>
+    <p>
+        <a class="link"
+           style="margin-right: 20px"
+           [routerLink]="['home']"
+           routerLinkActive="link_active"
+        >{{ 'HEADER.HOME_LINK' | translate }}</a>
+        <a class="link"
+           [routerLink]="['admin']"
+           routerLinkActive="link_active"
+        >{{ 'HEADER.ADMIN_LINK' | translate }}</a>
+    </p>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>

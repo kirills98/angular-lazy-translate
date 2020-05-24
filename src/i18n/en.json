@@ -1,0 +1,10 @@
+{
+  "HEADER": {
+    "TITLE": "Translations lazy loading example app",
+    "HOME_LINK": "Home",
+    "ADMIN_LINK": "Admin",
+    "LANG_LABEL": "Language",
+    "LANG_RU": "Russian",
+    "LANG_EN": "English"
+  }
+}
